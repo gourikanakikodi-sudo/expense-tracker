@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>💰 Expense Tracker</h1>
+
+    <!-- Total Balance -->
+<div class="balance-box">
+  <p>Total Spent</p>
+  <h2 id="total-amount">₹0</h2>
+</div>
+
+<!-- Today's Summary -->
+<div class="today-box">
+  <span>Today's Expenses</span>
+  <span id="today-amount">₹0</span>
+</div>
+
+    <!-- Add Expense Form -->
+    <div class="form-box">
+      <input type="text" id="exp-name" placeholder="Expense name (e.g. Coffee)" />
+      <input type="number" id="exp-amount" placeholder="Amount (₹)" min="0" />
+      <select id="exp-category">
+        <option value="Food">🍔 Food</option>
+        <option value="Transport">🚗 Transport</option>
+        <option value="Shopping">🛍️ Shopping</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Other">📦 Other</option>
+      </select>
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- Expense List -->
+    <ul id="expense-list"></ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
